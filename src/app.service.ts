@@ -32,7 +32,7 @@ export class AppService {
     return newReport;
   }
 
-  updateReport(type: ReportType, id: string, body: Report) {
+  updateReport(type: ReportType, id: string, body: Partial<Report>) {
     const reportToUpdate = data.report
       .filter((r) => r.type === type)
       .find((r) => r.id === id);
